@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="UTF-8" />
+      <title>Parcelles cadastrales Asco</title>
+
+      <link rel="icon" type="image/x-icon" href="drapeau_corse.jpg" />
+      
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+
+      <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+          height: 100%;
+        }
+
+        .div-map {
+          height: 80vh;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        h1 {
+          color: white;
+        }
+      </style>
+  </head>
+
+  <header class="text-center pt-2 pb-2 bg-info">
+    <h1 class="m-auto">PARCELLES CADASTRALES ASCO</h1>
+  </header>
+
+  <body>
+    <div class="row m-3">
+
+      <div class="col-sm-3">
+        <h4>Sélectionner une ou plusieurs parcelles :</h4>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="A368">
+          <label class="custom-control-label" for="A368">Parcelle A368</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="B183">
+          <label class="custom-control-label" for="B183">Parcelle B183</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="B355_356">
+          <label class="custom-control-label" for="B355_356">Parcelle B355 & B356</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="B364">
+          <label class="custom-control-label" for="B364">Parcelle B364</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="C43">
+          <label class="custom-control-label" for="C43">Parcelle C43</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="C53">
+          <label class="custom-control-label" for="C53">Parcelle C53</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="C62_63">
+          <label class="custom-control-label" for="C62_63">Parcelle C62 & C63</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="C633">
+          <label class="custom-control-label" for="C633">Parcelle C633</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="C931">
+          <label class="custom-control-label" for="C931">Parcelle C931</label>
+        </div>
+        <div class="custom-control custom-checkbox ml-5">
+          <input type="checkbox" class="custom-control-input" id="C1225_1228">
+          <label class="custom-control-label" for="C1225_1228">Parcelle C1225 & C1228</label>
+        </div>
+      </div>
+
+      <div class="col-sm-9 div-map"> 
+        <div id="map"></div> 
+      </div>
+      
+    </div> <!--End row-->
+    
+  </body>
+
+  <hr class="m-0">
+    <footer>
+      <div class="col-lg-12 p-3">
+        <p class="small text-center m-0">
+          Site réalisé par <strong>Thibault FIACRE </strong><span class="huge">&copy;</span> 2018 - 28 avenue Victor Hugo 26000 Valence - 06.84.86.83.94 - thibault.fiacre@gmail.com
+        </p>
+      </div>
+    </footer>
+
+    <script>
+
+      var url = "https://spreadsheets.google.com/feeds/cells/2PACX-1vT0XAgbaTvA_Ez1iguIX3ibLbL2pLYhfnAdsbyjf16NBksrfaD3wq9ll9vD9eUi-M_ueHUeG8vjb4IS/od6/public/basic?alt=json";
+      $.ajax({
+          url:url,
+          dataType:"jsonp",
+          success:function(data) {
+              // console.log(data.feed.entry);
+          },
+      });
+
+
+/*
+
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.45377631, lng: 9.03355663},
+          zoom: 15
+        });
+
+        $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/2PACX-1vT0XAgbaTvA_Ez1iguIX3ibLbL2pLYhfnAdsbyjf16NBksrfaD3wq9ll9vD9eUi-M_ueHUeG8vjb4IS/values/Parcelles!H4?key=AIzaSyAYDGo2_VK-fn1xFA2eOhdWURJZJ3q_UiE",
+
+
+
+          function(data) {
+            alert(data.values);
+            // $(data.values).each(function() {
+
+            // });
+          }
+        ); //End getJSON
+
+        // var A368Coords = [
+        //     {lat: 25.774, lng: -80.190},
+        //     {lat: 18.466, lng: -66.118},
+        //     {lat: 32.321, lng: -64.757}
+        // ];
+
+        // var A368 = new google.maps.Polygon({
+        //   paths: triangleCoords,
+        //   strokeColor: '#FF0000',
+        //   strokeOpacity: 0.8,
+        //   strokeWeight: 3,
+        //   fillColor: '#FF0000',
+        //   fillOpacity: 0.35
+        // });
+        // bermudaTriangle.setMap(map);
+      }
+
+      */
+    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDGo2_VK-fn1xFA2eOhdWURJZJ3q_UiE&callback=initMap" async defer></script> -->
+
+</html>
