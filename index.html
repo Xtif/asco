@@ -108,56 +108,60 @@
 
     <script>
 
-      var url = "https://spreadsheets.google.com/feeds/cells/2PACX-1vT0XAgbaTvA_Ez1iguIX3ibLbL2pLYhfnAdsbyjf16NBksrfaD3wq9ll9vD9eUi-M_ueHUeG8vjb4IS/od6/public/basic?alt=json";
-      $.ajax({
+      var map;
+
+      function initMap() {
+
+        var url = "https://spreadsheets.google.com/feeds/cells/1Wqx8XiFVUMPYbr3BkuKN2cL3CXuEKV_RpTdG1EEs7nQ/od6/public/basic?alt=json";
+        var A368 = new google.maps.MVCArray();
+
+        $.ajax({
           url:url,
           dataType:"jsonp",
-          success:function(data) {
-              // console.log(data.feed.entry);
-          },
-      });
+          success:function(data) {              
+            var tableauComplet = data.feed.entry;
+            
+            var tableauParcelles = tableauComplet.slice(12);
+            var tableauLong = [];
+            var tableauLat = [];
 
+            for(var i=0; i<tableauParcelles.length; i++) {
+              // console.log(tableauComplet[i].title.$t);
+              if (tableauParcelles[i].title.$t.includes("H")) {
+                tableauLong.push(tableauParcelles[i].content.$t)
+              }
+              if (tableauParcelles[i].title.$t.includes("I")) {
+                tableauLat.push(tableauParcelles[i].content.$t)
+              }
+            }
 
-/*
+            for(var j=0; j<=17; j++) {
+              A368.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
 
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 42.45377631, lng: 9.03355663},
-          zoom: 15
-        });
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 42.49555833, lng: 9.05210332},
+              zoom: 15,
+              mapTypeId: 'terrain'
+            });
 
-        $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/2PACX-1vT0XAgbaTvA_Ez1iguIX3ibLbL2pLYhfnAdsbyjf16NBksrfaD3wq9ll9vD9eUi-M_ueHUeG8vjb4IS/values/Parcelles!H4?key=AIzaSyAYDGo2_VK-fn1xFA2eOhdWURJZJ3q_UiE",
+            var A368Polygone = new google.maps.Polygon({
+              paths: A368,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 1,
+              fillColor: '#FF0000',
+              fillOpacity: 0.35
+            });
+            console.log(A368Polygone.getPath());
+            A368Polygone.setMap(map);
 
+          }, //End success
+        }); //End ajax
 
+      } //End initMap
 
-          function(data) {
-            alert(data.values);
-            // $(data.values).each(function() {
-
-            // });
-          }
-        ); //End getJSON
-
-        // var A368Coords = [
-        //     {lat: 25.774, lng: -80.190},
-        //     {lat: 18.466, lng: -66.118},
-        //     {lat: 32.321, lng: -64.757}
-        // ];
-
-        // var A368 = new google.maps.Polygon({
-        //   paths: triangleCoords,
-        //   strokeColor: '#FF0000',
-        //   strokeOpacity: 0.8,
-        //   strokeWeight: 3,
-        //   fillColor: '#FF0000',
-        //   fillOpacity: 0.35
-        // });
-        // bermudaTriangle.setMap(map);
-      }
-
-      */
     </script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDGo2_VK-fn1xFA2eOhdWURJZJ3q_UiE&callback=initMap" async defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDGo2_VK-fn1xFA2eOhdWURJZJ3q_UiE&callback=initMap" async defer></script>
 
 </html>
