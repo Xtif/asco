@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<gpx version="1.1" creator="GPS Visualizer http://www.gpsvisualizer.com/" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<trk>
+  <name>GPS data</name>
+  <trkseg>
+    <trkpt lat="42.46465934" lon="9.05581026"></trkpt>
+    <trkpt lat="42.46468268" lon="9.05589185"></trkpt>
+    <trkpt lat="42.464612" lon="9.0559781"></trkpt>
+    <trkpt lat="42.46453293" lon="9.05613838"></trkpt>
+    <trkpt lat="42.4644877" lon="9.05632787"></trkpt>
+    <trkpt lat="42.46436142" lon="9.05641063"></trkpt>
+    <trkpt lat="42.46395107" lon="9.05640147"></trkpt>
+    <trkpt lat="42.46385051" lon="9.05611624"></trkpt>
+    <trkpt lat="42.46373682" lon="9.05607952"></trkpt>
+    <trkpt lat="42.46356957" lon="9.05596441"></trkpt>
+    <trkpt lat="42.46368202" lon="9.05565653"></trkpt>
+    <trkpt lat="42.46388071" lon="9.05572284"></trkpt>
+    <trkpt lat="42.46387756" lon="9.05578288"></trkpt>
+    <trkpt lat="42.46415617" lon="9.05585695"></trkpt>
+    <trkpt lat="42.46465934" lon="9.05581026"></trkpt>
+  </trkseg>
+</trk>
+</gpx>

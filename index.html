@@ -22,7 +22,7 @@
         }
 
         .div-map {
-          height: 80vh;
+          height: 90vh;
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -35,6 +35,18 @@
         h1 {
           color: white;
         }
+
+        h5 {
+          font-size: 15px;
+        }
+
+        h6, p, a {
+          font-size: 13px;
+        }
+
+        .card {
+          margin-bottom: 5px;
+        }
       </style>
   </head>
 
@@ -45,49 +57,120 @@
   <body>
     <div class="row m-3">
 
-      <div class="col-sm-3">
-        <h4>Sélectionner une ou plusieurs parcelles :</h4>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="A368">
-          <label class="custom-control-label" for="A368">Parcelle A368</label>
+      <div class="col-sm-3 pr-0">
+        <h4 class="mb-3">Liste des parcelles :</h4>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle A368</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Rupiana</h6>
+            <p class="card-text m-0">Superficie : 1ha 64a 32ca</p>
+            <a href="#" id="0" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="A368.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="B183">
-          <label class="custom-control-label" for="B183">Parcelle B183</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle B183</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : L'Orzale</h6>
+            <p class="card-text m-0">Superficie : 49a 21ca</p>
+            <a href="#" id="1" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="B183.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="B355_356">
-          <label class="custom-control-label" for="B355_356">Parcelle B355 & B356</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle B355 et B356</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : L'Erzale</h6>
+            <p class="card-text m-0">Superficie B355 & B356 : 82a 97ca + 24ca</p>
+            <a href="#" id="2" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="B355_356.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="B364">
-          <label class="custom-control-label" for="B364">Parcelle B364</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle B364</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Scolca</h6>
+            <p class="card-text m-0">Superficie : 42a 82ca</p>
+            <a href="#" id="3" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="B364.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="C43">
-          <label class="custom-control-label" for="C43">Parcelle C43</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C43</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Piano</h6>
+            <p class="card-text m-0">Superficie : 83a 93ca</p>
+            <a href="#" id="4" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C43.gpx#" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="C53">
-          <label class="custom-control-label" for="C53">Parcelle C53</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C53</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Piano</h6>
+            <p class="card-text m-0">Superficie : 3ha 62a 16ca</p>
+            <a href="#" id="5" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C53.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="C62_63">
-          <label class="custom-control-label" for="C62_63">Parcelle C62 & C63</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C62 & C63</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Rado alle Volte</h6>
+            <p class="card-text m-0">Superficie C62 & C63 : 12a 15ca + 1ha 66a 74ca</p>
+            <a href="#" id="6" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C62_63.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="C633">
-          <label class="custom-control-label" for="C633">Parcelle C633</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C633</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Casale</h6>
+            <p class="card-text m-0">Superficie : 48ca</p>
+            <a href="#" id="7" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C633.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="C931">
-          <label class="custom-control-label" for="C931">Parcelle C931</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C931</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Fontanacia</h6>
+            <p class="card-text m-0">Superficie : 1a 39ca</p>
+            <a href="#" id="8" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C931.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-        <div class="custom-control custom-checkbox ml-5">
-          <input type="checkbox" class="custom-control-input" id="C1225_1228">
-          <label class="custom-control-label" for="C1225_1228">Parcelle C1225 & C1228</label>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C1225</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Ernella</h6>
+            <p class="card-text m-0">Superficie : 54ca</p>
+            <a href="#" id="9" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C1225.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
         </div>
-      </div>
+
+        <div class="card">
+          <div class="card-body p-2">
+            <h5 class="card-title m-0">Parcelle C1228</h5>
+            <h6 class="card-subtitle m-0 text-muted">Lieudit : Ernella</h6>
+            <p class="card-text m-0">Superficie : 1a 00ca</p>
+            <a href="#" id="10" class="card-link zoom">Zoomer sur la carte</a>
+            <a href="C1228.gpx" class="card-link">Télécharger .GPX</a>
+          </div>
+        </div>
+  
+      </div> <!--End col-sm-3-->
 
       <div class="col-sm-9 div-map"> 
         <div id="map"></div> 
@@ -110,20 +193,46 @@
 
       var map;
 
+      var A368;
+      var B183;
+      var B355_356;
+      var B364;
+      var C43;
+      var C53;
+      var C62_63;
+      var C633;
+      var C931;
+      var C1225;
+      var C1228;
+      var tableauComplet;  
+      var tableauParcelles;
+      var tableauLong = [];
+      var tableauLat = [];
+
       function initMap() {
 
         var url = "https://spreadsheets.google.com/feeds/cells/1Wqx8XiFVUMPYbr3BkuKN2cL3CXuEKV_RpTdG1EEs7nQ/od6/public/basic?alt=json";
-        var A368 = new google.maps.MVCArray();
+        A368 = new google.maps.MVCArray();
+        B183 = new google.maps.MVCArray();
+        B355_356 = new google.maps.MVCArray();
+        B364 = new google.maps.MVCArray();
+        C43 = new google.maps.MVCArray();
+        C53 = new google.maps.MVCArray();
+        C62_63 = new google.maps.MVCArray();
+        C633 = new google.maps.MVCArray();
+        C931 = new google.maps.MVCArray();
+        C1225 = new google.maps.MVCArray();
+        C1228 = new google.maps.MVCArray();
+
+        tableauAll = [];
 
         $.ajax({
           url:url,
           dataType:"jsonp",
           success:function(data) {              
-            var tableauComplet = data.feed.entry;
+            tableauComplet = data.feed.entry;
             
-            var tableauParcelles = tableauComplet.slice(12);
-            var tableauLong = [];
-            var tableauLat = [];
+            tableauParcelles = tableauComplet.slice(12);
 
             for(var i=0; i<tableauParcelles.length; i++) {
               // console.log(tableauComplet[i].title.$t);
@@ -138,26 +247,318 @@
             for(var j=0; j<=17; j++) {
               A368.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
             }
+            for(var j=18; j<=28; j++) {
+              B183.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=30; j<=46; j++) {
+              B355_356.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=47; j<=60; j++) {
+              B364.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=61; j<=74; j++) {
+              C43.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=75; j<=106; j++) {
+              C53.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=108; j<=123; j++) {
+              C62_63.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=124; j<=128; j++) {
+              C633.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=129; j<=135; j++) {
+              C931.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=136; j<=148; j++) {
+              C1225.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+            for(var j=149; j<=158; j++) {
+              C1228.push(new google.maps.LatLng(parseFloat(tableauLat[j]), parseFloat(tableauLong[j])));
+            }
+
+            tableauAll = [
+              A368.getArray()[0],
+              B183.getArray()[0],
+              B355_356.getArray()[0],
+              B364.getArray()[0],
+              C43.getArray()[0],
+              C53.getArray()[0],
+              C62_63.getArray()[0],
+              C633.getArray()[0],
+              C931.getArray()[0],
+              C1225.getArray()[0],
+              C1228.getArray()[0]
+            ];
 
             map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: 42.49555833, lng: 9.05210332},
-              zoom: 15,
-              mapTypeId: 'terrain'
+              center: {lat: 42.474348, lng: 9.045666},
+              zoom: 14,
+              mapTypeId: 'hybrid'
             });
 
             var A368Polygone = new google.maps.Polygon({
               paths: A368,
               strokeColor: '#FF0000',
               strokeOpacity: 1,
-              strokeWeight: 1,
-              fillColor: '#FF0000',
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
               fillOpacity: 0.35
             });
-            console.log(A368Polygone.getPath());
+            var A368Content = '<h5>Parcelle A368</h5>'
+            var A368Info = new google.maps.InfoWindow({
+              content: A368Content
+            });
+            var A368Marker = new google.maps.Marker({
+              position: {lat: 42.49421799, lng: 9.05339673},
+              map: map,
+              title: "A368"
+            });
+            A368Marker.addListener('click', function() {
+              A368Info.open(map, A368Marker);
+            });
             A368Polygone.setMap(map);
+
+
+            var B183Polygone = new google.maps.Polygon({
+              paths: B183,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var B183Content = '<h5>Parcelle B183</h5>'
+            var B183Info = new google.maps.InfoWindow({
+              content: B183Content
+            });
+            var B183Marker = new google.maps.Marker({
+              position: {lat: 42.46603408, lng: 9.05752920},
+              map: map,
+              title: "B183"
+            });
+            B183Marker.addListener('click', function() {
+              B183Info.open(map, B183Marker);
+            });
+            B183Polygone.setMap(map);
+
+
+            var B355_356Polygone = new google.maps.Polygon({
+              paths: B355_356,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var B355_356Content = '<h5>Parcelle B355 & B356</h5>'
+            var B355_356Info = new google.maps.InfoWindow({
+              content: B355_356Content
+            });
+            var B355_356Marker = new google.maps.Marker({
+              position: {lat: 42.46506674, lng: 9.05638853},
+              map: map,
+              title: "B355_356"
+            });
+            B355_356Marker.addListener('click', function() {
+             B355_356Info.open(map, B355_356Marker);
+            });
+            B355_356Polygone.setMap(map);
+
+
+            var B364Polygone = new google.maps.Polygon({
+              paths: B364,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var B364Content = '<h5>Parcelle B364</h5>'
+            var B364Info = new google.maps.InfoWindow({
+              content: B364Content
+            });
+            var B364Marker = new google.maps.Marker({
+              position: {lat: 42.46413604, lng: 9.05608749},
+              map: map,
+              title: "B364"
+            });
+            B364Marker.addListener('click', function() {
+             B364Info.open(map, B364Marker);
+            });
+            B364Polygone.setMap(map);
+
+            var C43Polygone = new google.maps.Polygon({
+              paths: C43,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C43Content = '<h5>Parcelle C43</h5>'
+            var C43Info = new google.maps.InfoWindow({
+              content: C43Content
+            });
+            var C43Marker = new google.maps.Marker({
+              position: {lat: 42.46618933, lng: 9.03195178},
+              map: map,
+              title: "C43"
+            });
+            C43Marker.addListener('click', function() {
+             C43Info.open(map, C43Marker);
+            });
+            C43Polygone.setMap(map);
+
+            var C53Polygone = new google.maps.Polygon({
+              paths: C53,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C53Content = '<h5>Parcelle C53</h5>'
+            var C53Info = new google.maps.InfoWindow({
+              content: C53Content
+            });
+            var C53Marker = new google.maps.Marker({
+              position: {lat: 42.46466354, lng: 9.03201396},
+              map: map,
+              title: "C53"
+            });
+            C53Marker.addListener('click', function() {
+             C53Info.open(map, C53Marker);
+            });
+            C53Polygone.setMap(map);
+
+            var C62_63Polygone = new google.maps.Polygon({
+              paths: C62_63,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C62_63Content = '<h5>Parcelle C62 & 63</h5>'
+            var C62_63Info = new google.maps.InfoWindow({
+              content: C62_63Content
+            });
+            var C62_63Marker = new google.maps.Marker({
+              position: {lat: 42.46366389, lng: 9.03230266},
+              map: map,
+              title: "C62_63"
+            });
+            C62_63Marker.addListener('click', function() {
+             C62_63Info.open(map, C62_63Marker);
+            });
+            C62_63Polygone.setMap(map);
+
+            var C633Polygone = new google.maps.Polygon({
+              paths: C633,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C633Content = '<h5>Parcelle C633</h5>'
+            var C633Info = new google.maps.InfoWindow({
+              content: C633Content
+            });
+            var C633Marker = new google.maps.Marker({
+              position: {lat: 42.45376080, lng: 9.03362365},
+              map: map,
+              title: "C633"
+            });
+            C633Marker.addListener('click', function() {
+             C633Info.open(map, C633Marker);
+            });
+            C633Polygone.setMap(map);
+
+            var C931Polygone = new google.maps.Polygon({
+              paths: C931,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C931Content = '<h5>Parcelle C931</h5>'
+            var C931Info = new google.maps.InfoWindow({
+              content: C931Content
+            });
+            var C931Marker = new google.maps.Marker({
+              position: {lat: 42.45182491, lng: 9.03278237},
+              map: map,
+              title: "C931"
+            });
+            C931Marker.addListener('click', function() {
+             C931Info.open(map, C931Marker);
+            });
+            C931Polygone.setMap(map);
+
+            var C1225Polygone = new google.maps.Polygon({
+              paths: C1225,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C1225Content = '<h5>Parcelle C1225</h5>'
+            var C1225Info = new google.maps.InfoWindow({
+              content: C1225Content
+            });
+            var C1225Marker = new google.maps.Marker({
+              position: {lat: 42.45886025, lng: 9.03277887},
+              map: map,
+              title: "C1225"
+            });
+            C1225Marker.addListener('click', function() {
+             C1225Info.open(map, C1225Marker);
+            });
+            C1225Polygone.setMap(map);
+
+            var C1228Polygone = new google.maps.Polygon({
+              paths: C1228,
+              strokeColor: '#FF0000',
+              strokeOpacity: 1,
+              strokeWeight: 2,
+              fillColor: '#17A2B8',
+              fillOpacity: 0.35
+            });
+            var C1228Content = '<h5>Parcelle C1228</h5>'
+            var C1228Info = new google.maps.InfoWindow({
+              content: C1228Content
+            });
+            var C1228Marker = new google.maps.Marker({
+              position: {lat: 42.45878650, lng: 9.03265142},
+              map: map,
+              title: "C1228"
+            });
+            C1228Marker.addListener('click', function() {
+             C1228Info.open(map, C1228Marker);
+            });
+            C1228Polygone.setMap(map);
+          
 
           }, //End success
         }); //End ajax
+
+        $(".zoom").each(function(index) {
+          $(this).on("click", function(e) {
+            e.preventDefault();
+            var selection = $(this).attr("id");
+            map.setCenter(tableauAll[selection]);
+            if (selection < 7) {
+              map.setZoom(17);
+            } else {
+              map.setZoom(20);
+            }
+          });
+        });
 
       } //End initMap
 
